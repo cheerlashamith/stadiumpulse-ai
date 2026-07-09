@@ -75,7 +75,7 @@ const AppShell: React.FC = () => {
       <header className={`sticky top-0 z-40 border-b backdrop-blur-md px-4 py-3.5 transition-all ${
         highContrast 
           ? 'bg-black border-white' 
-          : 'bg-white/95 border-slate-200/80 shadow-xs dark:bg-slate-900/95 dark:border-slate-800'
+          : 'bg-slate-900/95 border-slate-800 shadow-xs dark:bg-slate-900/95 dark:border-slate-800'
       }`}>
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
           
@@ -92,19 +92,19 @@ const AppShell: React.FC = () => {
             </div>
             <div>
               <h1 className={`text-md font-bold tracking-tight flex items-center space-x-2 ${
-                highContrast ? 'text-white' : 'text-slate-950'
+                highContrast ? 'text-white' : 'text-slate-100'
               }`}>
                 <span>{translate('app.title', language)}</span>
                 <span className={`text-[9px] px-2 py-0.5 rounded-full uppercase font-mono font-bold border ${
                   highContrast 
                     ? 'bg-black border-white text-white' 
-                    : 'bg-emerald-50 border-emerald-200 text-emerald-700'
+                    : 'bg-emerald-950 border-emerald-800 text-emerald-450'
                 }`}>
                   WC 2026
                 </span>
               </h1>
               <p className={`text-[10px] font-medium ${
-                highContrast ? 'text-slate-300' : 'text-slate-500'
+                highContrast ? 'text-slate-300' : 'text-slate-400'
               }`}>{translate('app.tagline', language)}</p>
             </div>
           </div>
@@ -113,7 +113,7 @@ const AppShell: React.FC = () => {
           <div className="flex flex-wrap items-center gap-3">
             {/* Language Selector */}
             <div className={`flex items-center space-x-1 border rounded-xl px-2.5 py-1.5 ${
-              highContrast ? 'bg-black border-white' : 'bg-white border-slate-200 shadow-xs'
+              highContrast ? 'bg-black border-white' : 'bg-slate-950/80 border-slate-800 shadow-xs text-white'
             }`}>
               <Globe className={`h-4 w-4 shrink-0 ${highContrast ? 'text-white' : 'text-slate-400'}`} />
               <select
@@ -121,20 +121,20 @@ const AppShell: React.FC = () => {
                 value={language}
                 onChange={(e) => setLanguage(e.target.value as any)}
                 className={`bg-transparent text-xs focus:outline-none cursor-pointer font-semibold font-sans ${
-                  highContrast ? 'text-white' : 'text-slate-700'
+                  highContrast ? 'text-white' : 'text-slate-200'
                 }`}
               >
-                <option value="en" className={highContrast ? 'bg-black text-white' : 'bg-white text-slate-950'}>EN • English</option>
-                <option value="es" className={highContrast ? 'bg-black text-white' : 'bg-white text-slate-950'}>ES • Español</option>
-                <option value="hi" className={highContrast ? 'bg-black text-white' : 'bg-white text-slate-950'}>HI • हिंदी</option>
-                <option value="fr" className={highContrast ? 'bg-black text-white' : 'bg-white text-slate-950'}>FR • Français</option>
-                <option value="ar" className={highContrast ? 'bg-black text-white' : 'bg-white text-slate-950'}>AR • العربية (RTL)</option>
+                <option value="en" className="bg-slate-950 text-slate-100">EN • English</option>
+                <option value="es" className="bg-slate-950 text-slate-100">ES • Español</option>
+                <option value="hi" className="bg-slate-950 text-slate-100">HI • हिंदी</option>
+                <option value="fr" className="bg-slate-950 text-slate-100">FR • Français</option>
+                <option value="ar" className="bg-slate-950 text-slate-100">AR • العربية (RTL)</option>
               </select>
             </div>
 
             {/* Role Switch Tabs */}
             <nav className={`flex items-center space-x-1 border rounded-xl p-1 ${
-              highContrast ? 'bg-black border-white' : 'bg-slate-100 border-slate-200'
+              highContrast ? 'bg-black border-white' : 'bg-slate-950/60 border-slate-800'
             }`} aria-label="Role Switch Navigation">
               
               {/* Overview Landing Page Tab */}
@@ -142,8 +142,8 @@ const AppShell: React.FC = () => {
                 onClick={() => setShowLanding(true)}
                 className={`px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center space-x-1.5 transition ${
                   showLanding 
-                    ? (highContrast ? 'bg-white text-black font-extrabold border border-white' : 'bg-emerald-600 text-white font-bold shadow-xs border border-emerald-500/10') 
-                    : (highContrast ? 'text-slate-300' : 'text-slate-600 hover:text-slate-900')
+                    ? (highContrast ? 'bg-white text-black font-extrabold border border-white' : 'bg-emerald-600 text-white font-bold shadow-xs border border-emerald-500/20') 
+                    : (highContrast ? 'text-slate-300' : 'text-slate-400 hover:text-slate-200')
                 }`}
                 aria-current={showLanding ? 'page' : undefined}
                 aria-label="View platform overview"
@@ -156,11 +156,11 @@ const AppShell: React.FC = () => {
               <button
                 onClick={() => handleRoleChange('fan')}
                 className={`px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center space-x-1.5 transition ${
-                  role === 'fan' 
-                    ? (highContrast ? 'bg-white text-black font-extrabold border border-white' : 'bg-white text-slate-950 font-bold shadow-xs border border-slate-250/20') 
-                    : (highContrast ? 'text-slate-300' : 'text-slate-600 hover:text-slate-900')
+                  role === 'fan' && !showLanding
+                    ? (highContrast ? 'bg-white text-black font-extrabold border border-white' : 'bg-emerald-600 text-white font-bold shadow-xs border border-emerald-500/20') 
+                    : (highContrast ? 'text-slate-300' : 'text-slate-400 hover:text-slate-200')
                 }`}
-                aria-current={role === 'fan' ? 'page' : undefined}
+                aria-current={role === 'fan' && !showLanding ? 'page' : undefined}
                 aria-label="Switch to fan mode"
               >
                 <Users className="h-3.5 w-3.5" />
@@ -171,11 +171,11 @@ const AppShell: React.FC = () => {
               <button
                 onClick={() => handleRoleChange('accessibility_fan')}
                 className={`px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center space-x-1.5 transition ${
-                  role === 'accessibility_fan' 
-                    ? (highContrast ? 'bg-white text-black font-extrabold border border-white' : 'bg-white text-slate-950 font-bold shadow-xs border border-slate-250/20') 
-                    : (highContrast ? 'text-slate-300' : 'text-slate-600 hover:text-slate-900')
+                  role === 'accessibility_fan' && !showLanding
+                    ? (highContrast ? 'bg-white text-black font-extrabold border border-white' : 'bg-emerald-600 text-white font-bold shadow-xs border border-emerald-500/20') 
+                    : (highContrast ? 'text-slate-300' : 'text-slate-400 hover:text-slate-200')
                 }`}
-                aria-current={role === 'accessibility_fan' ? 'page' : undefined}
+                aria-current={role === 'accessibility_fan' && !showLanding ? 'page' : undefined}
                 aria-label="Switch to accessibility fan mode"
               >
                 <Accessibility className="h-3.5 w-3.5" />
@@ -186,11 +186,11 @@ const AppShell: React.FC = () => {
               <button
                 onClick={() => handleRoleChange('volunteer')}
                 className={`px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center space-x-1.5 transition ${
-                  role === 'volunteer' 
-                    ? (highContrast ? 'bg-white text-black font-extrabold border border-white' : 'bg-white text-slate-950 font-bold shadow-xs border border-slate-250/20') 
-                    : (highContrast ? 'text-slate-300' : 'text-slate-600 hover:text-slate-900')
+                  role === 'volunteer' && !showLanding
+                    ? (highContrast ? 'bg-white text-black font-extrabold border border-white' : 'bg-emerald-600 text-white font-bold shadow-xs border border-emerald-500/20') 
+                    : (highContrast ? 'text-slate-300' : 'text-slate-400 hover:text-slate-200')
                 }`}
-                aria-current={role === 'volunteer' ? 'page' : undefined}
+                aria-current={role === 'volunteer' && !showLanding ? 'page' : undefined}
                 aria-label="Switch to volunteer console"
               >
                 <ClipboardList className="h-3.5 w-3.5" />
@@ -201,11 +201,11 @@ const AppShell: React.FC = () => {
               <button
                 onClick={() => handleRoleChange('organizer')}
                 className={`px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center space-x-1.5 transition ${
-                  role === 'organizer' 
-                    ? (highContrast ? 'bg-white text-black font-extrabold border border-white' : 'bg-white text-slate-950 font-bold shadow-xs border border-slate-250/20') 
-                    : (highContrast ? 'text-slate-300' : 'text-slate-600 hover:text-slate-900')
+                  role === 'organizer' && !showLanding
+                    ? (highContrast ? 'bg-white text-black font-extrabold border border-white' : 'bg-emerald-600 text-white font-bold shadow-xs border border-emerald-500/20') 
+                    : (highContrast ? 'text-slate-300' : 'text-slate-400 hover:text-slate-200')
                 }`}
-                aria-current={role === 'organizer' ? 'page' : undefined}
+                aria-current={role === 'organizer' && !showLanding ? 'page' : undefined}
                 aria-label="Switch to organizer command center"
               >
                 <Shield className="h-3.5 w-3.5" />
