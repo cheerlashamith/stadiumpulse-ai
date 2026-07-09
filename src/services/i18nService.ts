@@ -14,7 +14,12 @@ const translations: Record<AppLanguage, any> = {
 };
 
 /**
- * Basic translation helper resolving path-like keys (e.g., 'app.title')
+ * Resolves translation lookup keys (e.g., 'app.title') to localized strings.
+ * Falls back dynamically to English translation if key is missing in chosen target locale.
+ *
+ * @param {string} key - Nested translation dictionary dot-notation path.
+ * @param {AppLanguage} [lang='en'] - Target ISO locale code (en, es, hi, fr, ar).
+ * @returns {string} The localized text string or key itself if resolution fails.
  * 
  * Serves Area 6 (Multilingual assistance)
  */

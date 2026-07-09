@@ -10,6 +10,12 @@ export interface RealtimeState {
   transport: TransportOption[];
 }
 
+/**
+ * Simulator engine driving real-time updates for stadium digital twins.
+ * Simulates crowd fluctuations, transport arrivals, incident management, and volunteer tracking.
+ *
+ * Serves Area 2 (Crowd management) & Area 7 (Operational intelligence)
+ */
 class MockRealtimeService {
   private state: RealtimeState;
   private listeners: Set<(state: RealtimeState) => void> = new Set();
@@ -109,6 +115,13 @@ class MockRealtimeService {
     }, 5000);
   }
 
+  /**
+   * Subscribes a listener callback to real-time state changes.
+   * Immediately emits the initial state to sync components on mount.
+   *
+   * @param {function} listener - State observer callback.
+   * @returns {function} Unsubscribe callback to detach listener and clear memory.
+   */
   public subscribe(listener: (state: RealtimeState) => void): () => void {
     this.listeners.add(listener);
     // Emit initial state immediately
@@ -123,12 +136,21 @@ class MockRealtimeService {
     this.listeners.forEach(listener => listener({ ...this.state }));
   }
 
+  /**
+   * Fetches the current snapshot of the arena's real-time twin state.
+   *
+   * @returns {RealtimeState} The active state metrics wrapper.
+   */
   public getState(): RealtimeState {
     return this.state;
   }
 
   /**
-   * Action to submit or report a new incident.
+   * Reports a new crowd congestion, safety, or medical incident in a zone.
+   * Automatically allocates an active volunteer task, linking it to the incident ID.
+   *
+   * @param {Omit<Incident, 'id' | 'timestamp'>} incident - Reported incident parameter fields.
+   * @returns {Incident} The newly created incident record containing generated IDs and timestamps.
    */
   public reportIncident(incident: Omit<Incident, 'id' | 'timestamp'>): Incident {
     const newIncident: Incident = {
@@ -155,7 +177,11 @@ class MockRealtimeService {
   }
 
   /**
-   * Action to claim a volunteer task.
+   * Assigns a volunteer to claim and resolve an active task.
+   * Updates state variables and triggers subscriber updates.
+   *
+   * @param {string} taskId - The ID of target volunteer task.
+   * @param {string} volunteerName - Claiming volunteer agent name.
    */
   public assignTask(taskId: string, volunteerName: string) {
     this.state.tasks = this.state.tasks.map(task => {
@@ -168,8 +194,10 @@ class MockRealtimeService {
   }
 
   /**
-   * Action to complete a volunteer task.
-   * Feeds back into resolving the underlying incident log.
+   * Marks a volunteer task as fully resolved.
+   * Feeds back into automatically updating and resolving the underlying logged incident.
+   *
+   * @param {string} taskId - The ID of completed volunteer task.
    */
   public completeTask(taskId: string) {
     let incidentIdToResolve = '';

@@ -24,10 +24,14 @@ function setToCache(key: string, data: any) {
 }
 
 /**
- * Frontend Service brokering secure API queries to the back-end Gemini endpoint proxy.
- * Implements automated client-side caching to prevent API spam and unnecessary cost blowouts.
+ * Client Service brokering conversational queries to the back-end Gemini proxy endpoint.
+ * Implements client-side caching (TTL: 1-minute) to optimize bandwidth and limit API usage spikes.
+ *
+ * @param {string} prompt - Verified user prompt query.
+ * @param {AppLanguage} language - Target translation language code.
+ * @returns {Promise<string>} AI conversational response text or local offline backup text.
  * 
- * Serves Area 3 (Security) & Area 5 (Efficiency)
+ * Serves Area 6 (Multilingual assistance) & Area 1 (Navigation)
  */
 export async function askConcierge(prompt: string, language: AppLanguage): Promise<string> {
   const cacheKey = `concierge-${language}-${prompt}`;
@@ -52,6 +56,15 @@ export async function askConcierge(prompt: string, language: AppLanguage): Promi
   }
 }
 
+/**
+ * Queries the crowd routing recommendation proxy to analyze active zone density.
+ * Computes targeted directives for fans and staff, caching requests to minimize server load.
+ *
+ * @param {StadiumZone[]} zonesData - Array of current zone occupancy and capacity numbers.
+ * @returns {Promise<object>} Dynamically computed crowd directives and incident severity levels.
+ * 
+ * Serves Area 2 (Crowd management) & Area 8 (Decision support)
+ */
 export async function getCrowdRecommendations(zonesData: StadiumZone[]): Promise<{
   fanDirective: string;
   staffDirective: string;
@@ -83,6 +96,16 @@ export async function getCrowdRecommendations(zonesData: StadiumZone[]): Promise
   }
 }
 
+/**
+ * Calculates a multi-modal green travel strategy based on a starting origin hotel/station.
+ * Calculates carbon offsets and directs fans to the least congested gateway.
+ *
+ * @param {string} startingPoint - User departure point (e.g. Airport, Hotel).
+ * @param {TransportOption[]} transitOptions - Active transport routes and schedules.
+ * @returns {Promise<object>} Recommended transit mode details, ETA, gate entrance, and carbon metrics.
+ * 
+ * Serves Area 4 (Transportation) & Area 5 (Sustainability)
+ */
 export async function getTransitPlan(startingPoint: string, transitOptions: TransportOption[]): Promise<{
   recommendedMode: string;
   eta: string;
@@ -118,6 +141,14 @@ export async function getTransitPlan(startingPoint: string, transitOptions: Tran
   }
 }
 
+/**
+ * Aggregates all reported incidents to auto-generate a shift brief summary for stewarding teams.
+ *
+ * @param {Incident[]} incidents - Collection of active reported stadium issues.
+ * @returns {Promise<string>} Aggregated shift briefing text or offline static fallback logs.
+ * 
+ * Serves Area 7 (Operational intelligence)
+ */
 export async function getShiftBriefing(incidents: Incident[]): Promise<string> {
   // Minimize payload size for caching key efficiency
   const cacheKey = `briefing-${incidents.length}-${incidents.map(i => i.id + i.status).join(',')}`;
@@ -142,6 +173,17 @@ export async function getShiftBriefing(incidents: Incident[]): Promise<string> {
   }
 }
 
+/**
+ * Performs a diagnostic breakdown of abnormal density metrics at a target zone.
+ * Recommends prompt security/volunteer dispatch workflows for field teams.
+ *
+ * @param {string} zoneName - Name of zone triggering density sensors.
+ * @param {number} currentOccupancy - Current zone headcount.
+ * @param {number} capacity - Venue capacity limit.
+ * @returns {Promise<string>} AI diagnosis warning and visual audit checklist items.
+ * 
+ * Serves Area 7 (Operational intelligence)
+ */
 export async function getAnomalyDiagnosis(zoneName: string, currentOccupancy: number, capacity: number): Promise<string> {
   const cacheKey = `anomaly-${zoneName}-${currentOccupancy}`;
   const cached = getFromCache(cacheKey);

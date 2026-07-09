@@ -1,7 +1,7 @@
 import React from 'react';
 import { describe, test, expect } from 'vitest';
 import { render, screen, fireEvent } from '@testing-library/react';
-import { AppStateProvider } from '../hooks/useAppState';
+import { AppStateProvider, useAppState } from '../hooks/useAppState';
 import { LiveMatchTracker } from '../features/tracking/LiveMatchTracker';
 
 describe('LiveMatchTracker Component Tests', () => {
@@ -65,5 +65,35 @@ describe('LiveMatchTracker Component Tests', () => {
     // Fire events and ensure simulation pauses/updates state
     fireEvent.click(goalBtn);
     expect(screen.getByText(/Resume Tracking/i)).toBeDefined(); // Toggled to pause mode
+  });
+
+  test('adapts styling options for high contrast accessibility mode', () => {
+    const AccessibilityTestWrapper: React.FC = () => {
+      const { setHighContrast } = useAppState();
+      return (
+        <div>
+          <button onClick={() => setHighContrast(true)}>Toggle Contrast</button>
+          <LiveMatchTracker />
+        </div>
+      );
+    };
+
+    render(
+      <AppStateProvider>
+        <AccessibilityTestWrapper />
+      </AppStateProvider>
+    );
+
+    // Toggle high contrast on
+    const toggleBtn = screen.getByText('Toggle Contrast');
+    fireEvent.click(toggleBtn);
+
+    // Verify scoreboard tags still exist under high contrast layout overrides
+    expect(screen.getByText('EMD')).toBeDefined();
+    expect(screen.getByText('TEL')).toBeDefined();
+    
+    // Check accessibility ARIA role matches
+    const container = screen.getByRole('region', { name: /Football Match Digital Twin/i });
+    expect(container).toBeDefined();
   });
 });

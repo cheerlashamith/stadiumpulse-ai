@@ -214,6 +214,18 @@ const counterFrames: PlayFrame[] = [
   }
 ];
 
+/**
+ * Futuristic 2D Digital Twin Football Match Tracker component.
+ * Renders a soccer pitch utilizing framer-motion keyframes to animate the positions
+ * of the soccer ball and players on the field. Features modular tab selections for:
+ * - Live Tracking: moving players with synchronized text-based match commentary.
+ * - Tactical Heatmap: pulsing alpha blur gradient meshes.
+ * - Passing Vectors: animated directional SVG arrow arrays.
+ * 
+ * Supports standard accessibility high contrast configurations and multilingual lookups.
+ * 
+ * @component
+ */
 export const LiveMatchTracker: React.FC = () => {
   const { language, highContrast } = useAppState();
   

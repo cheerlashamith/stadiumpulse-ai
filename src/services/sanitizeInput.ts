@@ -1,8 +1,10 @@
 /**
- * Sanitizes and validates user input before sending to the Gemini API or displaying in UI.
- * Protects against XSS injection, enforces length constraints, and intercepts basic prompt-injection attempts.
- * 
- * Serves Area 3 (Security)
+ * Result structure returned by input sanitization utility.
+ *
+ * @interface SanitizationResult
+ * @property {boolean} isValid - Flag signaling if input passed security checks.
+ * @property {string} sanitizedText - Capped, HTML-stripped, clean query text.
+ * @property {string} [error] - Informative validation block message if suspicious characters/keywords matched.
  */
 export interface SanitizationResult {
   isValid: boolean;
@@ -10,6 +12,16 @@ export interface SanitizationResult {
   error?: string;
 }
 
+/**
+ * Validates user prompt inputs to secure backend queries against prompt injection and XSS exploits.
+ * Strips HTML script structures, caps maximum request size, and inspects keywords for malicious activity.
+ *
+ * @param {string} input - Raw conversational user prompt or text log.
+ * @param {number} [maxLen=500] - Hard length cap constraint to defend against DOS buffer spam.
+ * @returns {SanitizationResult} Result containing clean text and validation status.
+ * 
+ * Serves Area 3 (Security)
+ */
 export function sanitizeInput(input: string, maxLen: number = 500): SanitizationResult {
   if (!input) {
     return {
