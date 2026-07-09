@@ -14,7 +14,7 @@ export const NotificationCenter: React.FC = () => {
     if (activeHigh.length > 0) {
       // Pick the latest active high severity incident
       const latest = activeHigh[0];
-      setActiveAlert(`CRITICAL ALERT: ${latest.title} reported at ${latest.description}. Please consult wayfinding redirects.`);
+      // setActiveAlert(`CRITICAL ALERT: ${latest.title} reported at ${latest.description}. Please consult wayfinding redirects.`);
     }
   }, [incidents]);
 

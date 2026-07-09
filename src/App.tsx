@@ -57,7 +57,7 @@ const AppShell: React.FC = () => {
     <div className={`min-h-screen ${
       highContrast 
         ? 'bg-black text-white font-mono' 
-        : 'bg-slate-50 text-slate-900 font-sans'
+        : 'bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-slate-100 font-sans'
     } transition-colors duration-200`}>
       {/* Accessibility: Skip to main content link */}
       <a 
@@ -74,7 +74,7 @@ const AppShell: React.FC = () => {
       <header className={`sticky top-0 z-40 border-b backdrop-blur-md px-4 py-3.5 transition-all ${
         highContrast 
           ? 'bg-black border-white' 
-          : 'bg-white/95 border-slate-200/80 shadow-xs'
+          : 'bg-white/95 border-slate-200/80 shadow-xs dark:bg-slate-900/95 dark:border-slate-800'
       }`}>
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
           
