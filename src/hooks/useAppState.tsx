@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect, useMemo, useTransition } from 'react';
-import { UserRole, AppLanguage, StadiumZone, Incident, VolunteerTask, TransportOption } from '../types';
+import { UserRole, AppLanguage, Incident } from '../types';
 import { mockRealtimeService, RealtimeState } from '../services/mockRealtimeService';
 
 interface AppStateContextType {

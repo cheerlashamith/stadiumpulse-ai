@@ -4,7 +4,7 @@ import { useAppState } from '../../hooks/useAppState';
 import { translate } from '../../services/i18nService';
 import { 
   Play, Pause, RefreshCw, Zap, Flame, Award, Shield, 
-  ChevronRight, Volume2, Info, Compass 
+  Volume2, Info, Compass 
 } from 'lucide-react';
 
 // Player coordinate data type

@@ -2,7 +2,6 @@ import { describe, test, expect, vi, beforeEach, afterEach } from 'vitest';
 import { askConcierge, getTransitPlan } from '../services/geminiService';
 
 describe('geminiService Frontend API Broker Tests', () => {
-  const originalFetch = global.fetch;
 
   beforeEach(() => {
     vi.stubGlobal('fetch', vi.fn());
