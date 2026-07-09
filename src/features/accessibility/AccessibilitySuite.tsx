@@ -74,7 +74,7 @@ export const AccessibilitySuite: React.FC = () => {
 
         {/* Text Size Toggle */}
         <button
-          onClick={() => setTextSize(textSize === 'large' ? 'regular' : 'regular')}
+          onClick={() => setTextSize(textSize === 'large' ? 'regular' : 'large')}
           className={`flex items-center space-x-2.5 p-3.5 rounded-xl text-xs transition ${getButtonClass(textSize === 'large', 'bg-emerald-50 border-emerald-200 text-emerald-800')}`}
           aria-pressed={textSize === 'large'}
           id="btn-toggle-text-size"
