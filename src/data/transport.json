@@ -1,0 +1,52 @@
+[
+  {
+    "id": "trans-1",
+    "name": "Metro Line 1 (Metropolitan Express)",
+    "type": "metro",
+    "status": "fluid",
+    "eta": "4 mins",
+    "description": "High-capacity subway directly connected to North Concourse (Gate 1). Best option to bypass road traffic.",
+    "carbonSaved": 3.4,
+    "capacity": "Excellent (Trains every 3 mins)"
+  },
+  {
+    "id": "trans-2",
+    "name": "FIFA Tournament Shuttle Bus (Route South)",
+    "type": "bus",
+    "status": "congested",
+    "eta": "15 mins",
+    "description": "Free shuttle buses routing between South Plaza and downtown fan zones. Expect delays due to heavy roadway traffic.",
+    "carbonSaved": 2.1,
+    "capacity": "Moderate (Buses queued at bay)"
+  },
+  {
+    "id": "trans-3",
+    "name": "Rideshare Pickup Hub (West Lot D)",
+    "type": "rideshare",
+    "status": "delayed",
+    "eta": "25 mins",
+    "description": "Uber/Lyft/Taxi dedicated pick-up plaza. High surge rates and traffic queues in surrounding roads.",
+    "carbonSaved": 0.5,
+    "capacity": "Low (Long waiting times for pick-up)"
+  },
+  {
+    "id": "trans-4",
+    "name": "Official Parking Lot B (East)",
+    "type": "parking",
+    "status": "on-time",
+    "eta": "10 mins (walk)",
+    "description": "Pre-booked secure parking located 600m East of Gate 2. Accessible shuttles run to Gate 4 every 5 minutes.",
+    "carbonSaved": 0.0,
+    "capacity": "85% Full (Limited spots remaining)"
+  },
+  {
+    "id": "trans-5",
+    "name": "Bicycle Parking & Micromobility Docks (North & West)",
+    "type": "metro",
+    "status": "fluid",
+    "eta": "Immediate",
+    "description": "Free secure bicycle racks and e-scooter docking areas on North and West perimeter fences. Direct zero-congestion lanes.",
+    "carbonSaved": 4.8,
+    "capacity": "Plenty (300+ racks available)"
+  }
+]

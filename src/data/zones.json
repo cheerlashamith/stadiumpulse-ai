@@ -1,0 +1,82 @@
+[
+  {
+    "id": "gate-1",
+    "name": "Gate 1 - North Entrance",
+    "capacity": 8000,
+    "occupancy": 3200,
+    "crowdLevel": "medium",
+    "description": "Main northern entrance near public transport transit hubs.",
+    "accessible": true,
+    "accessibleRoutes": ["Platform A Lift", "North Ramp Left"]
+  },
+  {
+    "id": "gate-2",
+    "name": "Gate 2 - East Entrance",
+    "capacity": 6000,
+    "occupancy": 1200,
+    "crowdLevel": "low",
+    "description": "Eastern access gate adjacent to Premium Parking Lot B.",
+    "accessible": true,
+    "accessibleRoutes": ["East Lift Lobby 1"]
+  },
+  {
+    "id": "gate-3",
+    "name": "Gate 3 - South Gate",
+    "capacity": 10000,
+    "occupancy": 9500,
+    "crowdLevel": "high",
+    "description": "Southern exit and entry gate, close to shuttle stations.",
+    "accessible": false,
+    "accessibleRoutes": []
+  },
+  {
+    "id": "gate-4",
+    "name": "Gate 4 - West Gate (Accessible Primary)",
+    "capacity": 5000,
+    "occupancy": 1500,
+    "crowdLevel": "low",
+    "description": "Primary accessible gate with zero-step entry and dedicated assistance desks.",
+    "accessible": true,
+    "accessibleRoutes": ["West Lower concourse lift", "Wheelchair Lane 1"]
+  },
+  {
+    "id": "zone-a",
+    "name": "Zone A - North Stand Upper",
+    "capacity": 12000,
+    "occupancy": 11500,
+    "crowdLevel": "high",
+    "description": "Upper deck north stand seating, accessed via Escalators 3 & 4.",
+    "accessible": false,
+    "accessibleRoutes": []
+  },
+  {
+    "id": "zone-b",
+    "name": "Zone B - East Stand Concourse",
+    "capacity": 15000,
+    "occupancy": 7200,
+    "crowdLevel": "medium",
+    "description": "East concourse seating and concession row including major dining outlets.",
+    "accessible": true,
+    "accessibleRoutes": ["East Concourse Elevator"]
+  },
+  {
+    "id": "zone-c",
+    "name": "Zone C - South stand Club Level",
+    "capacity": 8000,
+    "occupancy": 2400,
+    "crowdLevel": "low",
+    "description": "South premium stand seating with direct accessibility ramp access.",
+    "accessible": true,
+    "accessibleRoutes": ["South Lift Lobby A", "Suite Elevator"]
+  },
+  {
+    "id": "zone-d",
+    "name": "Zone D - West Stand Lower",
+    "capacity": 10000,
+    "occupancy": 4800,
+    "crowdLevel": "medium",
+    "description": "Lower deck seating near team benches, close to accessible seating deck.",
+    "accessible": true,
+    "accessibleRoutes": ["West Deck Wheelchair Lift"]
+  }
+]

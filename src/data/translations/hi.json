@@ -1,0 +1,87 @@
+{
+  "app": {
+    "title": "StadiumPulse AI",
+    "tagline": "फीफा विश्व कप २०२६ ऑपरेशन्स",
+    "roleSelector": "भूमिका बदलें",
+    "fanRole": "फैन हब",
+    "accessibilityRole": "सुगमता मोड",
+    "volunteerRole": "स्वयंसेवक कंसोल",
+    "organizerRole": "कमांड सेंटर",
+    "language": "भाषा",
+    "carbonSaved": "बचाया गया कार्बन",
+    "crowdLevel": "भीड़ का स्तर"
+  },
+  "roles": {
+    "fan": "फैन अनुभव",
+    "accessibility_fan": "सुगम्य फैन हब",
+    "volunteer": "स्वयंसेवक कंसोल",
+    "organizer": "कमांड सेंटर"
+  },
+  "concierge": {
+    "title": "एआई दरबान सहायक",
+    "placeholder": "सीटों, द्वारों, बसों, भोजन के बारे में पूछें...",
+    "send": "भेजें",
+    "voiceOn": "आवाज चालू",
+    "voiceOff": "आवाज बंद",
+    "ttsOn": "टीटीएस चालू",
+    "ttsOff": "टीटीएस म्यूट",
+    "welcome": "नमस्ते! मैं आपका एआई स्टेडियम सहायक हूँ। आज मैं स्टेडियम नेविगेशन में आपकी क्या मदद कर सकता हूँ?"
+  },
+  "crowd": {
+    "title": "लाइव गेट और सेक्शन भीड़",
+    "low": "कम",
+    "medium": "मध्यम",
+    "high": "अधिक",
+    "gate": "गेट",
+    "concourse": "कॉन्कोर्स",
+    "reRouteRecommendation": "एआई भीड़ नियंत्रण योजना",
+    "updateText": "सेंसर से लाइव डेटा"
+  },
+  "accessibility": {
+    "highContrast": "उच्च कंट्रास्ट मोड",
+    "regularText": "सामान्य टेक्स्ट",
+    "largeText": "बड़ा टेक्स्ट",
+    "audioNav": "ऑडियो नेविगेशन",
+    "signAvatar": "सांकेतिक भाषा (अवतार)",
+    "accessibleFinder": "सुगम्य सुविधा खोजक",
+    "seating": "व्हीलचेयर सीटिंग",
+    "restroom": "सुगम्य शौचालय",
+    "medical": "प्राथमिक चिकित्सा स्टेशन",
+    "elevator": "सुगम्य लिफ्ट",
+    "zeroStep": "सीढ़ी-मुक्त मार्ग"
+  },
+  "transport": {
+    "title": "स्मार्ट यात्रा योजनाकार",
+    "placeholder": "शुरुआती स्थान दर्ज करें (जैसे एयरपोर्ट, होटल)",
+    "calculate": "मार्ग अनुकूलित करें",
+    "bestRoute": "जेमिनी यात्रा रणनीति",
+    "carbonSavings": "इको सेविंग स्कोर",
+    "arrival": "अनुमानित यात्रा समय",
+    "gateEntrance": "सबसे कम भीड़ वाला गेट"
+  },
+  "sustainability": {
+    "title": "ग्रीन स्टेडियम फुटप्रिंट",
+    "paperlessTicket": "डिजिटल टिकट सत्यापित",
+    "recyclingTitle": "रीसाइक्लिंग स्टेशन",
+    "greenTips": "सस्टेनेबिलिटी टिप्स",
+    "carbonGoal": "व्यक्तिगत कार्बन ऑफसेट लक्ष्य"
+  },
+  "organizer": {
+    "title": "ऑपरेशन्स कंट्रोल डेस्क",
+    "activeIncidents": "सक्रिय घटनाओं की निगरानी",
+    "shiftBriefing": "जेमिनी लाइव शिफ्ट सारांश",
+    "generateSummary": "घटनाओं का सारांश बनाएं",
+    "anomalyDetection": "असंगति का पता लगाना",
+    "decisionSupport": "एआई-जनित कार्रवाई योग्य सिफारिशें",
+    "status": "स्थिति",
+    "severity": "तीव्रता",
+    "action": "कार्रवाई"
+  },
+  "volunteer": {
+    "title": "स्वयंसेवक डिस्पैच बोर्ड",
+    "queue": "आपके सौंपे गए कार्य",
+    "complete": "पूर्ण चिह्नित करें",
+    "noTasks": "आपको कोई कार्य नहीं सौंपा गया है। सब साफ़!",
+    "statusCompleted": "सुलझाया और सिंक किया गया"
+  }
+}

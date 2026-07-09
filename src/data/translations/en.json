@@ -1,0 +1,87 @@
+{
+  "app": {
+    "title": "StadiumPulse AI",
+    "tagline": "FIFA World Cup 2026 Operations",
+    "roleSelector": "Switch Role View",
+    "fanRole": "Fan Hub (Mobile)",
+    "accessibilityRole": "Accessibility Mode",
+    "volunteerRole": "Volunteer Console",
+    "organizerRole": "Command Center",
+    "language": "Language",
+    "carbonSaved": "Carbon Saved",
+    "crowdLevel": "Crowd Level"
+  },
+  "roles": {
+    "fan": "Fan Experience",
+    "accessibility_fan": "Accessible Fan Hub",
+    "volunteer": "Volunteer Console",
+    "organizer": "Command Center"
+  },
+  "concierge": {
+    "title": "AI Concierge Assistant",
+    "placeholder": "Ask about seats, gates, transit, food...",
+    "send": "Send",
+    "voiceOn": "Speech On",
+    "voiceOff": "Speech Off",
+    "ttsOn": "TTS Enabled",
+    "ttsOff": "TTS Muted",
+    "welcome": "Hello! I am your AI Stadium Assistant. How can I help you navigate Stadium and Tournament spaces today?"
+  },
+  "crowd": {
+    "title": "Live Section & Gate Density",
+    "low": "Low",
+    "medium": "Medium",
+    "high": "High",
+    "gate": "Gate",
+    "concourse": "Concourse",
+    "reRouteRecommendation": "AI Rerouting Plan",
+    "updateText": "Simulated live feed polling every 5s"
+  },
+  "accessibility": {
+    "highContrast": "High Contrast Mode",
+    "regularText": "Regular Text",
+    "largeText": "Large Text",
+    "audioNav": "Audio Wayfinding",
+    "signAvatar": "Sign Language Avatar",
+    "accessibleFinder": "Accessible Facilities Finder",
+    "seating": "Wheelchair Seating",
+    "restroom": "Accessible Restroom",
+    "medical": "First Aid Stations",
+    "elevator": "Accessible Elevators",
+    "zeroStep": "Zero-Step Paths"
+  },
+  "transport": {
+    "title": "Smart Journey Router",
+    "placeholder": "Enter starting location (e.g. Airport, Hotel)",
+    "calculate": "Optimize Route",
+    "bestRoute": "Gemini Journey Strategy",
+    "carbonSavings": "Eco Savings Score",
+    "arrival": "Estimated Travel Time",
+    "gateEntrance": "Least Congested Gate Entry"
+  },
+  "sustainability": {
+    "title": "Green Stadium Footprint",
+    "paperlessTicket": "Paperless Smart Ticket Verified",
+    "recyclingTitle": "Eco Waste & Recycling Docks",
+    "greenTips": "Sustainability Nudges",
+    "carbonGoal": "Personal Carbon Offset Goal"
+  },
+  "organizer": {
+    "title": "Operations Control Deck",
+    "activeIncidents": "Active Incident Monitor",
+    "shiftBriefing": "GenAI Live Shift Summary",
+    "generateSummary": "Summarize Current Incidents",
+    "anomalyDetection": "Anomaly Rate Detection",
+    "decisionSupport": "Actionable Operational Directives",
+    "status": "Status",
+    "severity": "Severity",
+    "action": "Action"
+  },
+  "volunteer": {
+    "title": "Volunteer Dispatch Board",
+    "queue": "Your Assigned Incidents",
+    "complete": "Mark Resolved",
+    "noTasks": "No active tasks assigned to you. All clear!",
+    "statusCompleted": "Resolved & Synchronized"
+  }
+}

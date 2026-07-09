@@ -1,0 +1,6 @@
+{
+  "name": "StadiumPulse AI",
+  "description": "StadiumPulse AI is a Generative AI-powered Smart Stadium & Tournament Operations platform for the FIFA World Cup 2026.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

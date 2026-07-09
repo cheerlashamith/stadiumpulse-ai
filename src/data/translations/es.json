@@ -1,0 +1,87 @@
+{
+  "app": {
+    "title": "StadiumPulse AI",
+    "tagline": "Operaciones Copa Mundial FIFA 2026",
+    "roleSelector": "Cambiar Rol de Vista",
+    "fanRole": "Centro del Fanático",
+    "accessibilityRole": "Modo Accesible",
+    "volunteerRole": "Consola de Voluntarios",
+    "organizerRole": "Centro de Comando",
+    "language": "Idioma",
+    "carbonSaved": "Carbono Ahorrado",
+    "crowdLevel": "Nivel de Multitud"
+  },
+  "roles": {
+    "fan": "Experiencia del Fanático",
+    "accessibility_fan": "Centro Accesible para Fans",
+    "volunteer": "Consola de Voluntarios",
+    "organizer": "Centro de Mando"
+  },
+  "concierge": {
+    "title": "Conserje de IA Estadio",
+    "placeholder": "Pregunte sobre asientos, puertas de acceso, comida...",
+    "send": "Enviar",
+    "voiceOn": "Voz Activa",
+    "voiceOff": "Voz Desactivada",
+    "ttsOn": "TTS Activado",
+    "ttsOff": "TTS Silenciado",
+    "welcome": "¡Hola! Soy su asistente de IA de Stadium. ¿Cómo puedo ayudarle a navegar por el estadio y las áreas hoy?"
+  },
+  "crowd": {
+    "title": "Densidad de Puertas y Secciones",
+    "low": "Bajo",
+    "medium": "Medio",
+    "high": "Alto",
+    "gate": "Puerta",
+    "concourse": "Pasillo",
+    "reRouteRecommendation": "Plan IA de Desvío de Flujo",
+    "updateText": "Simulado cada 5s por sensores"
+  },
+  "accessibility": {
+    "highContrast": "Modo de Alto Contraste",
+    "regularText": "Texto Normal",
+    "largeText": "Texto Grande",
+    "audioNav": "Navegación Auditiva",
+    "signAvatar": "Lenguaje de Señas (Avatar)",
+    "accessibleFinder": "Buscador de Servicios Accesibles",
+    "seating": "Asientos para Sillas de Ruedas",
+    "restroom": "Baños Accesibles",
+    "medical": "Puestos de Primeros Auxilios",
+    "elevator": "Ascensores Accesibles",
+    "zeroStep": "Rutas sin Escalones"
+  },
+  "transport": {
+    "title": "Planificador de Viaje Inteligente",
+    "placeholder": "Ingrese punto de partida (ej. Aeropuerto, Hotel)",
+    "calculate": "Optimizar Ruta",
+    "bestRoute": "Estrategia de Viaje Gemini",
+    "carbonSavings": "Puntuación Ecológica",
+    "arrival": "Tiempo de Viaje Estimado",
+    "gateEntrance": "Puerta de Entrada Menos Congestionada"
+  },
+  "sustainability": {
+    "title": "Huella Ecológica de Estadio",
+    "paperlessTicket": "Boleto Digital QR Verificado",
+    "recyclingTitle": "Estaciones de Reciclaje y Residuos",
+    "greenTips": "Consejos Ecológicos Activos",
+    "carbonGoal": "Meta Personal de Compensación de Carbono"
+  },
+  "organizer": {
+    "title": "Panel de Control Operativo",
+    "activeIncidents": "Monitoreo de Incidentes Activos",
+    "shiftBriefing": "Resumen IA del Turno en Vivo",
+    "generateSummary": "Resumir Incidentes Actuales",
+    "anomalyDetection": "Detección de Anomalías",
+    "decisionSupport": "Directivas Operacionales de Acción IA",
+    "status": "Estado",
+    "severity": "Severidad",
+    "action": "Acción"
+  },
+  "volunteer": {
+    "title": "Panel de Despacho de Voluntarios",
+    "queue": "Incidentes Asignados",
+    "complete": "Marcar Resuelto",
+    "noTasks": "Sin tareas activas asignadas. ¡Todo despejado!",
+    "statusCompleted": "Resuelto y Sincronizado"
+  }
+}

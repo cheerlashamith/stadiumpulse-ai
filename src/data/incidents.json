@@ -1,0 +1,92 @@
+[
+  {
+    "id": "inc-101",
+    "zoneId": "gate-3",
+    "title": "Severe Bottleneck at Turnstiles",
+    "status": "active",
+    "severity": "high",
+    "timestamp": "2026-07-07T21:15:00-07:00",
+    "description": "High density at South Gate turnstiles due to digital ticket scanning slow-down. Crowd backing up into outer plazas."
+  },
+  {
+    "id": "inc-102",
+    "zoneId": "zone-b",
+    "title": "Minor Heat Exhaustion Case",
+    "status": "active",
+    "severity": "medium",
+    "timestamp": "2026-07-07T21:20:00-07:00",
+    "description": "An elderly fan is feeling faint on the East Concourse near Food Stall #4. Needs water and paramedic assessment."
+  },
+  {
+    "id": "inc-103",
+    "zoneId": "zone-a",
+    "title": "Minor Fan Dispute",
+    "status": "resolved",
+    "severity": "low",
+    "timestamp": "2026-07-07T20:30:00-07:00",
+    "description": "Seating assignment dispute between fans. Resolved by Stand Supervisor within 5 minutes."
+  },
+  {
+    "id": "inc-104",
+    "zoneId": "gate-1",
+    "title": "Lost Child Reported",
+    "status": "active",
+    "severity": "high",
+    "timestamp": "2026-07-07T21:30:00-07:00",
+    "description": "An 8-year-old child wearing a green jersey was separated from parents near North Entrance Gate 1. Wearing a green shirt, answers to 'Leo'."
+  },
+  {
+    "id": "inc-105",
+    "zoneId": "zone-d",
+    "title": "Liquid Spill Near Wheelchair Row",
+    "status": "active",
+    "severity": "low",
+    "timestamp": "2026-07-07T21:35:00-07:00",
+    "description": "Large soda spilled in Section 104 ADA seating access corridor. Slip hazard for crutches/wheelchairs. Needs janitorial team."
+  },
+  {
+    "id": "inc-106",
+    "zoneId": "gate-4",
+    "title": "High Demand for Wheelchair Assistance",
+    "status": "active",
+    "severity": "medium",
+    "timestamp": "2026-07-07T21:38:00-07:00",
+    "description": "Sudden arrival of shuttle buses carrying PWD fans has depleted the immediate supply of wheel-chairs and guides at Gate 4 desk."
+  },
+  {
+    "id": "inc-107",
+    "zoneId": "zone-a",
+    "title": "Stairwell Blockage",
+    "status": "active",
+    "severity": "medium",
+    "timestamp": "2026-07-07T21:40:00-07:00",
+    "description": "Fans standing in the aisles of Stairwell 3A to watch the pre-match performance, blocking egress routes."
+  },
+  {
+    "id": "inc-108",
+    "zoneId": "gate-2",
+    "title": "NFC Scanner Malfunction",
+    "status": "resolved",
+    "severity": "low",
+    "timestamp": "2026-07-07T20:10:00-07:00",
+    "description": "Scanner Lane 12 suffered network timeout. Rebooted and re-synchronized. Fully functional now."
+  },
+  {
+    "id": "inc-109",
+    "zoneId": "zone-c",
+    "title": "Faulty Handrail Reporting",
+    "status": "active",
+    "severity": "low",
+    "timestamp": "2026-07-07T21:41:00-07:00",
+    "description": "Section 212 accessibility ramp handrail is loose near the top platform. Needs maintenance tightening."
+  },
+  {
+    "id": "inc-110",
+    "zoneId": "gate-3",
+    "title": "Tailgating Congestion Outer Plaza",
+    "status": "active",
+    "severity": "medium",
+    "timestamp": "2026-07-07T21:25:00-07:00",
+    "description": "Huge gathering of fans without tickets creating crowd density bottleneck at South outer bag check barrier."
+  }
+]

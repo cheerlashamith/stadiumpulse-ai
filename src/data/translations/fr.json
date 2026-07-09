@@ -1,0 +1,87 @@
+{
+  "app": {
+    "title": "StadiumPulse AI",
+    "tagline": "Opérations de la Coupe du Monde de la FIFA 2026",
+    "roleSelector": "Changer de rôle",
+    "fanRole": "Espace Supporters",
+    "accessibilityRole": "Mode Accessibilité",
+    "volunteerRole": "Console Volontaires",
+    "organizerRole": "Centre de Commandement",
+    "language": "Langue",
+    "carbonSaved": "Carbone Économisé",
+    "crowdLevel": "Densité de Foule"
+  },
+  "roles": {
+    "fan": "Expérience Supporter",
+    "accessibility_fan": "Espace Supporter Accessible",
+    "volunteer": "Console Volontaires",
+    "organizer": "Centre de Commandement"
+  },
+  "concierge": {
+    "title": "Concierge IA du Stade",
+    "placeholder": "Des questions sur les sièges, portes, transports, repas...",
+    "send": "Envoyer",
+    "voiceOn": "Voix Activée",
+    "voiceOff": "Voix Désactivée",
+    "ttsOn": "Synthèse Active",
+    "ttsOff": "Synthèse Muette",
+    "welcome": "Bonjour ! Je suis votre assistant de stade IA. Comment puis-je vous aider à naviguer aujourd'hui ?"
+  },
+  "crowd": {
+    "title": "Densité en Direct des Portes & Sections",
+    "low": "Faible",
+    "medium": "Moyenne",
+    "high": "Élevée",
+    "gate": "Porte",
+    "concourse": "Tribune",
+    "reRouteRecommendation": "Plan IA de Redirection",
+    "updateText": "Flux simulé rafraîchi toutes les 5s"
+  },
+  "accessibility": {
+    "highContrast": "Mode Contraste Élevé",
+    "regularText": "Texte Normal",
+    "largeText": "Texte Agrandi",
+    "audioNav": "Guidage Audio",
+    "signAvatar": "Langue des Signes (Avatar)",
+    "accessibleFinder": "Recherche d'Équipements Accessibles",
+    "seating": "Places Fauteuil Roulant",
+    "restroom": "Toilettes Accessibles",
+    "medical": "Poste de Secours",
+    "elevator": "Ascenseurs Accessibles",
+    "zeroStep": "Parcours Sans Marche"
+  },
+  "transport": {
+    "title": "Optimiseur d'Itinéraire Intelligent",
+    "placeholder": "Saisissez votre point de départ (ex. Aéroport, Hôtel)",
+    "calculate": "Optimiser le Trajet",
+    "bestRoute": "Stratégie de Trajet Gemini",
+    "carbonSavings": "Score Éco-Énergétique",
+    "arrival": "Temps de Trajet Estimé",
+    "gateEntrance": "Porte la Moins Encombrée"
+  },
+  "sustainability": {
+    "title": "Empreinte Écologique du Stade",
+    "paperlessTicket": "Billet Numérique QR Validé",
+    "recyclingTitle": "Bornes de Tri et Recyclage",
+    "greenTips": "Conseils Éco-Responsables",
+    "carbonGoal": "Objectif de Compensation Carbone"
+  },
+  "organizer": {
+    "title": "Tableau de Bord des Opérations",
+    "activeIncidents": "Moniteur des Incidents Actifs",
+    "shiftBriefing": "Synthèse IA du Briefing",
+    "generateSummary": "Résumer les Incidents",
+    "anomalyDetection": "Detections des Anomalies",
+    "decisionSupport": "Directives Opérationnelles Recommandées par l'IA",
+    "status": "Statut",
+    "severity": "Gravité",
+    "action": "Action"
+  },
+  "volunteer": {
+    "title": "Gestion des Missions Volontaires",
+    "queue": "Vos Missions Assignées",
+    "complete": "Marquer Résolu",
+    "noTasks": "Aucune tâche active assignée. Tout est calme !",
+    "statusCompleted": "Résolu & Synchronisé"
+  }
+}
