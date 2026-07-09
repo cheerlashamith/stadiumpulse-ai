@@ -11,7 +11,7 @@ import { VolunteerConsole } from './features/volunteer/VolunteerConsole';
 import { OpsIntelDashboard } from './features/ops-intel/OpsIntelDashboard';
 import { IndoorWayfinding } from './features/navigation/IndoorWayfinding';
 import { NotificationCenter } from './features/alerts/NotificationCenter';
-import { LivePitchTracker } from './features/match/LivePitchTracker';
+import { LiveMatchTracker } from './features/tracking/LiveMatchTracker';
 import { 
   Users, Accessibility, Shield, ClipboardList, Globe, AlertCircle, Sparkles, LogIn 
 } from 'lucide-react';
@@ -256,9 +256,9 @@ const AppShell: React.FC = () => {
                 }`}>MATCH DAY LIVE</span>
               </div>
 
-              <LivePitchTracker />
               <SustainabilityLayer />
               <CrowdMap />
+              <LiveMatchTracker />
               <TransportOptimizer />
               <IndoorWayfinding />
             </div>

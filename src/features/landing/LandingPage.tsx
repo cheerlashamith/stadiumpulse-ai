@@ -5,6 +5,7 @@ import {
 } from 'lucide-react';
 import { translate } from '../../services/i18nService';
 import { AppLanguage } from '../../types';
+import { LiveMatchTracker } from '../tracking/LiveMatchTracker';
 
 interface LandingPageProps {
   onEnterRole: (role: 'fan' | 'accessibility_fan' | 'volunteer' | 'organizer') => void;
@@ -260,6 +261,11 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onEnterRole, language,
             <Shield className="h-4 w-4 text-rose-500" />
           </button>
         </div>
+      </section>
+
+      {/* LIVE FOOTBALL MAP CENTERPIECE */}
+      <section className="max-w-5xl mx-auto px-4 w-full">
+        <LiveMatchTracker />
       </section>
 
       {/* 2. CORE PORTALS SELECTOR GRID */}
