@@ -1,6 +1,26 @@
 # StadiumPulse AI: Smart Stadium & Tournament Operations Platform
 
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
+![Version](https://img.shields.io/badge/version-1.0.0-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Gen AI](https://img.shields.io/badge/Gen%20AI-Gemini%202.5%20Flash-orange)
+
 StadiumPulse AI is a complete, production-grade, highly accessible full-stack Generative AI application engineered for the **FIFA World Cup 2026**. It serves as a unified digital ecosystem to coordinate stadium transit, indoor wayfinding, safety dispatches, and crowd density optimization.
+
+🌐 **Live Demo:** [https://stadiumpulse-ai.netlify.app/](https://stadiumpulse-ai.netlify.app/)
+
+---
+
+## 🤖 Generative AI Integration (Core Feature)
+
+StadiumPulse AI strictly leverages Google's **Gemini 2.5 Flash** (via `@google/genai`) to provide real-time, context-aware decision support across the entire stadium ecosystem.
+
+### AI Capabilities Breakdown:
+1. **Multilingual Concierge:** Understands and generates natural language routing/accessibility instructions in English, Spanish, French, Hindi, and Arabic.
+2. **Crowd Management Decisions:** Analyzes arrays of live zone density data (e.g., Gate 3 at 95% capacity) to generate safe diversion directives for fans and dispatch instructions for staff.
+3. **Eco-Transit Optimization:** Evaluates starting locations against live transit statuses to generate carbon-optimized, multi-modal routing strategies with exact gate assignments.
+4. **Shift Briefing Generation:** Summarizes complex, multi-zone incident arrays into concise, actionable shift briefings for operations teams.
+5. **Anomaly Diagnosis:** Explains sudden spikes in zone capacity and prescribes physical visual checks for volunteer teams.
 
 ---
 
@@ -27,8 +47,18 @@ The application is engineered using a robust **Full-Stack Proxy Pattern** to sat
 ```
 
 1. **Zero Client Key Exposure:** The browser never touches or possesses the `GEMINI_API_KEY`.
-2. **Server Isolation:** The backend Express server (`/server.ts`) initializes the Google GenAI client securely using system environment variables and exposes clean, target-specific API endpoints (`/api/concierge`, `/api/transit-plan`, `/api/crowd-reroute`, etc.) to the client.
+2. **Server Isolation:** The backend Express server (`/server.ts`) initializes the Google GenAI client securely using system environment variables and exposes clean, target-specific API endpoints to the client.
 3. **Resilient Local Heuristic Fallbacks:** If the cloud service experiences a latency surge or goes offline, the frontend broker instantly shifts queries to a localized rule-based fallback knowledge base, ensuring stadium operations never freeze.
+
+---
+
+## 🛠️ Technology Stack
+
+- **Frontend:** React 19, TypeScript, Tailwind CSS v4, Framer Motion (Animations), Recharts (Data Visualization)
+- **Backend:** Node.js, Express.js (API Gateway)
+- **AI/ML:** Google GenAI SDK (`gemini-2.5-flash`)
+- **Testing:** Vitest, React Testing Library, JSDOM
+- **Build/Tooling:** Vite, ESBuild, ESLint
 
 ---
 
@@ -74,11 +104,23 @@ Every focus area defined in the operational brief is fully implemented:
 
 ## 🔒 Enterprise-Grade Security Suite
 
-StadiumPulse AI implements four layered defense mechanisms:
+StadiumPulse AI implements layered defense mechanisms:
 1. **XSS Protection:** Escapes all user-submitted text inputs.
 2. **Prompt Injection Shield:** Evaluates inputs against adversarial phrase signatures (e.g., *"ignore previous rules"*, *"show system prompt"*). If flagged, it halts the request, logs an incident, and outputs `[PROMPT INJECTION BLOCKED]`.
 3. **Role Gating:** The Command Center is strictly protected by a mock operator authorization gate requiring code `FIFA2026`.
 4. **Input Size Caps:** Enforces strict limits (300 chars) on user query buffers before transmission.
+5. **Security Headers:** The Express backend enforces `X-Frame-Options: DENY`, `X-Content-Type-Options: nosniff`, and strong `Content-Security-Policy`.
+
+---
+
+## 🔌 API Endpoints Documentation
+
+The backend exposes the following sanitized, AI-backed endpoints:
+- `POST /api/concierge`: Processes fan queries and language requests to generate wayfinding assistance.
+- `POST /api/crowd-reroute`: Accepts stadium zone occupancy arrays and returns dispersion directives.
+- `POST /api/transit-plan`: Analyzes starting points to generate eco-friendly transit graphs and carbon-saving metrics.
+- `POST /api/shift-briefing`: Generates a shift summary from a complex array of live incident data.
+- `POST /api/anomaly-diagnosis`: Prescribes rapid-response visual checks based on unexpected capacity spikes.
 
 ---
 
@@ -96,7 +138,6 @@ NODE_ENV="development"
 ```
 
 ### 2. Dependency Installation
-Install base dependencies:
 ```bash
 npm install
 ```
@@ -120,15 +161,17 @@ npm start
 
 The platform is covered by a comprehensive suite of unit and integration tests using **Vitest** and **React Testing Library**:
 
+*   `/src/tests/server.test.ts` — Validates all backend endpoint security validations and injection rejections.
 *   `/src/tests/sanitizeInput.test.ts` — Tests input sanitization, HTML stripping, length caps, and prompt injection blocks.
 *   `/src/tests/mockRealtimeService.test.ts` — Tests subscriber patterns, density boundaries, and task closures.
 *   `/src/tests/geminiService.test.ts` — Verifies successful API fetches and local heuristic fallback.
 *   `/src/tests/CrowdMap.test.tsx` — Integration test for responsive zone renders.
 *   `/src/tests/AccessibilityToggle.test.tsx` — Verifies state transitions for high-contrast and text-size selectors.
+*   `/src/tests/LiveMatchTracker.test.tsx` — Verifies component rendering, interactions, and accessible high-contrast adaptability.
 
 ### Running Tests
 Execute the Vitest runner:
 ```bash
 npm run test
+npm run lint
 ```
-*Expected test coverage on the `/src/services/` layer is **85%+**.*

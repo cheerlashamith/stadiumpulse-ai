@@ -12,6 +12,7 @@ import { OpsIntelDashboard } from './features/ops-intel/OpsIntelDashboard';
 import { IndoorWayfinding } from './features/navigation/IndoorWayfinding';
 import { NotificationCenter } from './features/alerts/NotificationCenter';
 import { LiveMatchTracker } from './features/tracking/LiveMatchTracker';
+import { ErrorBoundary } from './components/ErrorBoundary';
 import { 
   Users, Accessibility, Shield, ClipboardList, Globe, AlertCircle, Sparkles, LogIn 
 } from 'lucide-react';
@@ -433,8 +434,10 @@ const AppShell: React.FC = () => {
 
 export default function App() {
   return (
-    <AppStateProvider>
-      <AppShell />
-    </AppStateProvider>
+    <ErrorBoundary>
+      <AppStateProvider>
+        <AppShell />
+      </AppStateProvider>
+    </ErrorBoundary>
   );
 }

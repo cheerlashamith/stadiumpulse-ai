@@ -60,7 +60,7 @@ class MockRealtimeService {
    * Serves Area 2 (Crowd management) & Area 7 (Operational intelligence)
    */
   private startSimulation() {
-    this.intervalId = setInterval(() => {
+    setInterval(() => {
       let stateChanged = false;
 
       // 1. Simulating crowd fluctuations

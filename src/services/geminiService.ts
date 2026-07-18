@@ -1,26 +1,26 @@
 import { StadiumZone, Incident, TransportOption, AppLanguage } from '../types';
 
-interface CacheEntry {
-  data: any;
+interface CacheEntry<T> {
+  data: T;
   expiry: number;
 }
 
-const cache: Record<string, CacheEntry> = {};
+const cache: Record<string, CacheEntry<unknown>> = {};
 const TTL_MS = 60 * 1000; // 1-minute cache TTL
 
-function getFromCache(key: string): any | null {
-  const entry = cache[key];
+function getFromCache<T>(key: string): T | null {
+  const entry = cache[key] as CacheEntry<T> | undefined;
   if (entry && entry.expiry > Date.now()) {
     return entry.data;
   }
   return null;
 }
 
-function setToCache(key: string, data: any) {
+function setToCache<T>(key: string, data: T): void {
   cache[key] = {
     data,
     expiry: Date.now() + TTL_MS
-  };
+  } as CacheEntry<unknown>;
 }
 
 /**
